@@ -22,6 +22,9 @@ public class Company {
 		
 	}
 	
+	public String toString() {
+		return companyName;
+	}
 	
 	/**
 	 * @param args

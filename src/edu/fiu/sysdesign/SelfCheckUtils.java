@@ -21,7 +21,7 @@ import java.util.List;
  * features to this as time goes on.
  * 
  * @author asengupt (Arijit Sengupta - FIU)
- * modified by Tran La. I am confused.
+ * modified by Tran La
  */
 public class SelfCheckUtils {
 	
