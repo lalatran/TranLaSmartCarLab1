@@ -15,10 +15,10 @@ public class Blade {
 	private double cuttingWidth;
 	private int maxTorque;
 	
-	public void cutGrass() {
+	public void startCutting() {
 		
 	}
-	public void stopCuttingWhenMowerIsLifted() {
+	public void stopCutting() {
 		
 	}
 }
