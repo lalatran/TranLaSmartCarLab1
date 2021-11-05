@@ -21,7 +21,4 @@ public class Blade {
 	public void stopCuttingWhenMowerIsLifted() {
 		
 	}
-	public void stopCuttingWhenMowerIsOff() {
-		
-	}
 }
