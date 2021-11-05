@@ -15,10 +15,10 @@ public class CameraSensor extends Sensor {
 	public boolean detectObstaclePresence(boolean yes) {
 		return yes;
 	}
-	public void startCapture() {
+	public void startRecording() {
 		
 	}
-	public void stopCapture() {
+	public void stopRecording() {
 		
 	}
 }
