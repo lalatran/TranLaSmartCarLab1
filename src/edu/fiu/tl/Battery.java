@@ -15,6 +15,9 @@ public class Battery {
 	private int voltage;
 	private double ampHours;
 	
+/** charge is a method that returns adds to the power
+ * 	of the lawn mower.
+ */
 	public void charge() {
 		
 	}
