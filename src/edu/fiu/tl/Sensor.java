@@ -13,4 +13,11 @@ public abstract class Sensor {
 	private String model;
 	private String manufacturer;
 	private String description;
+	
+	public void sensorOn() {
+		
+	}
+	public void sensorOff() {
+		
+	}
 }
