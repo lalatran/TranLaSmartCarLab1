@@ -18,11 +18,12 @@ public class CommandDeck {
 	public void protectUserFromDebris() {
 		
 	}
+	
 	public void turnOn() {
-		
+		System.out.println("Command is active");
 	}
 	public void turnOff() {
-		
+		System.out.println("Command is non-active");
 	}
 }
 
