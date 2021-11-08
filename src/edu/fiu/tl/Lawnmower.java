@@ -28,7 +28,7 @@ public class Lawnmower {
 /** Methods for the Lawnmower class
  * 
  */
-	public static void systemOn() {
+	public void systemOn() {
 		System.out.println("Lawnmower is ready!");
 	} 
 	public void systemOff() {
@@ -52,7 +52,10 @@ public class Lawnmower {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-		Lawnmower l = new Lawnmower("iRobot Terra");
+		// Print statements for Lawnmower class
+		Lawnmower l = new Lawnmower("iRobot Terra t7");
+		System.out.println("Let me introduce you to the "+ l +"!");
+		
 		l.systemOn();
 		l.systemOff();
 		l.moveForward();
@@ -60,9 +63,14 @@ public class Lawnmower {
 		l.turnRight();
 		l.turnLeft();
 	
-		System.out.println("Let me introduce you to the "+ l +"!");
 		
+		// Print statements for Blade class
+		Blade myBlade = new Blade("Carbon Steel");
+		System.out.println(l+" uses "+ myBlade+" blades.");
+		myBlade.startCutting();
+		myBlade.stopCutting();
 		
+		//Print statements for 
 	}
 
 }
