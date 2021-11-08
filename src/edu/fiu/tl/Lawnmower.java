@@ -3,13 +3,16 @@
  */
 package edu.fiu.tl;
 
+import edu.fiu.sysdesign.SelfCheckCapable;
+import edu.fiu.sysdesign.SelfCheckUtils;
+
 /**
  * @author Tran
  *
  */
-public class Lawnmower {
+public class Lawnmower implements SelfCheckCapable {
 	
-/** Attributes for the Lawnmower class
+/** Attributes for the Lawn mower class
  * 
  */
 	private String manufacturer; 
@@ -18,14 +21,13 @@ public class Lawnmower {
 	private double weight;
 	private String color;
 	
-	public Lawnmower(String name) {
-		this.modelName = name;
-	}
-	public String toString() {
-		return modelName;
+	public Lawnmower() {
+		manufacturer =new String("Husqvarna");
+		modelName = new String("450X Automower");
 	}
 	
-/** Methods for the Lawnmower class
+	
+/** Methods for the Lawn mower class
  * 
  */
 	public void systemOn() {
@@ -52,7 +54,10 @@ public class Lawnmower {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-		// Print statements for Lawnmower class
+		Lawnmower myMower = new Lawnmower();
+		myMower.runSelfCheck();
+		
+		/** Print statements for Lawn mower class
 		Lawnmower l = new Lawnmower("iRobot Terra t7");
 		System.out.println("Let me introduce you to the "+ l +"!");
 		
@@ -69,8 +74,24 @@ public class Lawnmower {
 		System.out.println(l+" uses "+ myBlade+" blades.");
 		myBlade.startCutting();
 		myBlade.stopCutting();
-		
-		//Print statements for 
+		*/ 
+	}
+	@Override
+	public boolean selfCheck() {
+		// TODO Auto-generated method stub
+		return SelfCheckUtils.randomCheck(0.1);
+	}
+	
+	@Override
+	public String getComponentName() {
+		// TODO Auto-generated method stub
+		return "My fancy lawn mower" ;
+	}
+
+	@Override
+	public boolean runSelfCheck() {
+		// TODO Auto-generated method stub
+		return SelfCheckUtils.basicSelfCheckRunner(this);
 	}
 
 }
