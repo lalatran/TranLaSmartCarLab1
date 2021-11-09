@@ -26,7 +26,13 @@ public class Lawnmower implements SelfCheckCapable {
 		modelName = new String("450X Automower");
 	}
 	
-	
+	/**public void setWeight(double mowerWeight) {
+		weight=mowerWeight;
+	}
+	public void printMowerDetails() {
+		System.out.println("modelName");
+	}
+	*/
 /** Methods for the Lawn mower class
  * 
  */
