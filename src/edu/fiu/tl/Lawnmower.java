@@ -62,6 +62,7 @@ public class Lawnmower implements SelfCheckCapable {
 
 		Lawnmower myMower = new Lawnmower();
 		myMower.runSelfCheck();
+		myMower.systemOn();
 		
 		/** Print statements for Lawn mower class
 		Lawnmower l = new Lawnmower("iRobot Terra t7");
