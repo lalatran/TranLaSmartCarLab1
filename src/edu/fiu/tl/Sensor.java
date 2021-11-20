@@ -14,10 +14,13 @@ public abstract class Sensor {
 	private String manufacturer;
 	private String description;
 	
-	public void sensorOn() {
-		
+	public void autoSense() {
+		System.out.println("Sensors activated.");
 	}
-	public void sensorOff() {
-		
+	public void sendSignal() {
+		System.out.println("Signals sending...");
+	}
+	public void alertUser() {
+		System.out.println("WARNING! I sense an obstacle!");
 	}
 }

@@ -56,6 +56,9 @@ public class Lawnmower implements SelfCheckCapable {
 
 		Lawnmower myMower = new Lawnmower();
 		myMower.runSelfCheck();
+		Button myButton=new Button();
+		myButton.pressButton();
+		
 		myMower.systemOn();
 	
 		Battery myBattery = new Battery();
@@ -66,14 +69,11 @@ public class Lawnmower implements SelfCheckCapable {
 		myBlade.autoCut();
 		myBlade.stopCutting();
 		
+		CameraSensor mySensor = new CameraSensor();
+		mySensor.autoSense();
+		mySensor.sendSignal();
+		mySensor.alertUser();
 		
-	/**	
-		// Print statements for Blade class
-		Blade myBlade = new Blade("Carbon Steel");
-		System.out.println(l+" uses "+ myBlade+" blades.");
-		myBlade.startCutting();
-		myBlade.stopCutting();
-		*/ 
 	}
 	@Override
 	public boolean selfCheck() {
