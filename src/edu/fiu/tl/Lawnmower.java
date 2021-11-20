@@ -21,11 +21,27 @@ public class Lawnmower implements SelfCheckCapable {
 	private double weight;
 	private String color;
 	
-	public Lawnmower() {
+	/** public Lawnmower() {
 		manufacturer =new String("Husqvarna");
 		modelName = new String("450X Automower");
 	}
+	*/
+	public Lawnmower(String myManufacturer, String myModelName,String myColor) {
+		manufacturer = myManufacturer;
+		modelName = myModelName;
+		color=myColor;
+	}
+
+	public void setWeight(int year, double myWeight) {
+		modelYear=year;
+		weight=myWeight;
+	}
 	
+	public void printMower() {
+		System.out.println("Manufacturer: "+ manufacturer);
+		System.out.println("Name: "+ modelName);
+	}
+
 	/**public void setWeight(double mowerWeight) {
 		weight=mowerWeight;
 	}
@@ -33,9 +49,7 @@ public class Lawnmower implements SelfCheckCapable {
 		System.out.println("modelName");
 	}
 	*/
-/** Methods for the Lawn mower class
- * 
- */
+/** Methods for the Lawn mower class */
 	public void systemOn() {
 		System.out.println("Lawnmower is ready!");
 	} 
@@ -54,10 +68,14 @@ public class Lawnmower implements SelfCheckCapable {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-		Lawnmower myMower = new Lawnmower();
+		Lawnmower myMower = new Lawnmower("Husqvarna","Automower","Midnight Black");
+		myMower.printMower();
+		myMower.setWeight(2020, 98);
 		myMower.runSelfCheck();
+		
 		Button myButton=new Button();
 		myButton.pressButton();
+		
 		
 		myMower.systemOn();
 	
@@ -73,6 +91,11 @@ public class Lawnmower implements SelfCheckCapable {
 		mySensor.autoSense();
 		mySensor.sendSignal();
 		mySensor.alertUser();
+		
+		Wheel myWheel1=new Wheel("Rubber");
+		myWheel1.setDimensions(13.4, 2.5);
+		myWheel1.printWheel();
+		
 		
 	}
 	@Override
