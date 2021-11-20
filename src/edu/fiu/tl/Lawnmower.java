@@ -107,7 +107,7 @@ public class Lawnmower implements SelfCheckCapable {
 	@Override
 	public String getComponentName() {
 		// TODO Auto-generated method stub
-		return "My fancy lawn mower" ;
+		return "my robotic mower" ;
 	}
 
 	@Override
