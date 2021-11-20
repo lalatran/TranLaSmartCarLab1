@@ -10,7 +10,7 @@ public class BoundarySensor extends Sensor {
  * 
  */
 	public void scanArea() {
-		
+		System.out.println("Scanning now...");
 	}
 /** within PerimeterWire is a method that returns a yes or no
  *  result to determine whether or not the lawn mower

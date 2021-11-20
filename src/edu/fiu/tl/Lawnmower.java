@@ -69,7 +69,7 @@ public class Lawnmower implements SelfCheckCapable {
 		myBlade.autoCut();
 		myBlade.stopCutting();
 		
-		CameraSensor mySensor = new CameraSensor();
+		Sensor mySensor = new CameraSensor();
 		mySensor.autoSense();
 		mySensor.sendSignal();
 		mySensor.alertUser();
