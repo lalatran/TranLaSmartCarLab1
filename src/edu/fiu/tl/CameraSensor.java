@@ -16,10 +16,10 @@ public class CameraSensor extends Sensor {
 		return yes;
 	}
 	public void startCapture() {
-		
+		System.out.println("Recording begins.");
 	}
 	public void stopCapture() {
-		
+		System.out.println("Recording stops.");
 	}
 }
 
