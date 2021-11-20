@@ -17,17 +17,21 @@ public class Blade {
 	private double cuttingWidth;
 	private int maxTorque;
 	
-	public Blade(String name) {
-		this.bladeType = name; 
+	public Blade() {
+		this.bladeType = bladeType; 
+		this.bladeModel= bladeModel;
 	}
 	public String toString() {
 		return bladeType;
 	}
-	
-	public void startCutting() {
+	public String toString1() {
+		return bladeModel;
+	}
+	public void autoCut() {
 		System.out.println("Cutting has begun.");
 	}
 	public void stopCutting() {
 		System.out.println("Cutting has stopped.");
 	}
+	
 }

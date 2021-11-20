@@ -15,15 +15,5 @@ public class CommandDeck {
 	private double deckWidth;
 	private double deckHeight;
 	
-	public void protectUserFromDebris() {
-		
-	}
-	
-	public void turnOn() {
-		System.out.println("Command is active");
-	}
-	public void turnOff() {
-		System.out.println("Command is non-active");
-	}
 }
 

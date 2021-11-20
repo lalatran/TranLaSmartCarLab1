@@ -19,6 +19,9 @@ public class Battery {
  * 	of the lawn mower.
  */
 	public void charge() {
-		
+		System.out.println("Mower is charging.");
+	}
+	public void getPowerPercentage() {
+		System.out.println("Battery is at 50%");
 	}
 }

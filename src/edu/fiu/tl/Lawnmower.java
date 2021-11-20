@@ -42,17 +42,11 @@ public class Lawnmower implements SelfCheckCapable {
 	public void systemOff() {
 		System.out.println("Lawnmower is not ready!");
 	}
-	public void moveForward() {
+	public void motionToLawn() {
 		System.out.println("Lawnmower is moving forward!");
 	}
-	public void moveBackward() {
-		System.out.println("Lawnmower is moving backwards!");
-	}
-	public void turnRight() {
-		System.out.println("Lawnmower turns right!");
-	}
-	public void turnLeft() {
-		System.out.println("Lawnmower turns left!");
+	public void turnPath() {
+		System.out.println("Lawnmower turns!");
 	}
 	/**
 	 * @param args
@@ -63,19 +57,17 @@ public class Lawnmower implements SelfCheckCapable {
 		Lawnmower myMower = new Lawnmower();
 		myMower.runSelfCheck();
 		myMower.systemOn();
-		
-		/** Print statements for Lawn mower class
-		Lawnmower l = new Lawnmower("iRobot Terra t7");
-		System.out.println("Let me introduce you to the "+ l +"!");
-		
-		l.systemOn();
-		l.systemOff();
-		l.moveForward();
-		l.moveBackward();
-		l.turnRight();
-		l.turnLeft();
 	
+		Battery myBattery = new Battery();
+		myBattery.charge();
+		myBattery.getPowerPercentage();
 		
+		Blade myBlade= new Blade();
+		myBlade.autoCut();
+		myBlade.stopCutting();
+		
+		
+	/**	
 		// Print statements for Blade class
 		Blade myBlade = new Blade("Carbon Steel");
 		System.out.println(l+" uses "+ myBlade+" blades.");
