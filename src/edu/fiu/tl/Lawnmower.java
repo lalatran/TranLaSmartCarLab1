@@ -21,34 +21,23 @@ public class Lawnmower implements SelfCheckCapable {
 	private double weight;
 	private String color;
 	
-	/** public Lawnmower() {
-		manufacturer =new String("Husqvarna");
-		modelName = new String("450X Automower");
-	}
-	*/
-	public Lawnmower(String myManufacturer, String myModelName,String myColor) {
+	public Lawnmower(int year, String myManufacturer, String myModelName,String myColor) {
+		modelYear=year;
 		manufacturer = myManufacturer;
 		modelName = myModelName;
 		color=myColor;
 	}
 
-	public void setWeight(int year, double myWeight) {
-		modelYear=year;
+	public void setWeight(double myWeight) {
 		weight=myWeight;
 	}
 	
 	public void printMower() {
-		System.out.println("Manufacturer: "+ manufacturer);
-		System.out.println("Name: "+ modelName);
+		System.out.println(modelYear+ " "+ manufacturer + " " + modelName+ " in "+ color);
+		System.out.println("Weight: "+ weight+ " lbs");
+
 	}
 
-	/**public void setWeight(double mowerWeight) {
-		weight=mowerWeight;
-	}
-	public void printMowerDetails() {
-		System.out.println("modelName");
-	}
-	*/
 /** Methods for the Lawn mower class */
 	public void systemOn() {
 		System.out.println("Lawnmower is ready!");
@@ -68,10 +57,15 @@ public class Lawnmower implements SelfCheckCapable {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-		Lawnmower myMower = new Lawnmower("Husqvarna","Automower","Midnight Black");
-		myMower.printMower();
-		myMower.setWeight(2020, 98);
+		Lawnmower myMower = new Lawnmower(2020,"Husqvarna","Automower","Midnight Black");
 		myMower.runSelfCheck();
+		System.out.println("Information about my smart mower: ");
+		System.out.println();
+		myMower.setWeight(98.2);
+		myMower.printMower();
+		
+		CommandDeck myDeck= new CommandDeck("Fabricated", "Steel");
+		myDeck.printDeck();
 		
 		Button myButton=new Button();
 		myButton.pressButton();

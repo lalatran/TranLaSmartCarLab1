@@ -12,6 +12,6 @@ public class Button {
 	private String buttonShape;
 	
 	public void pressButton() {
-		System.out.println("Run.");
+		System.out.println("Run has been pressed.");
 	}
 }
