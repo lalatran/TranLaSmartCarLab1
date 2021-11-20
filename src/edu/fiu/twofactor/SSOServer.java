@@ -26,7 +26,7 @@ public class SSOServer implements SelfCheckCapable {
 	@Override
 	public boolean selfCheck() {
 		// TODO Auto-generated method stub
-		return SelfCheckUtils.randomCheck(0.1);
+		return SelfCheckUtils.randomCheck(0.5);
 	}
 
 	@Override
