@@ -34,7 +34,7 @@ public class Lawnmower implements SelfCheckCapable {
 	
 	public void printMower() {
 		System.out.println(modelYear+ " "+ manufacturer + " " + modelName+ " in "+ color);
-		System.out.println("Weight: "+ weight+ " lbs");
+		System.out.println("Weight: "+ weight + " lbs");
 
 	}
 
@@ -64,18 +64,20 @@ public class Lawnmower implements SelfCheckCapable {
 		myMower.setWeight(98.2);
 		myMower.printMower();
 		
-		CommandDeck myDeck= new CommandDeck("Fabricated", "Steel");
+		CommandDeck myDeck= new CommandDeck("fabricated", "steel");
 		myDeck.printDeck();
 		
 		Button myButton=new Button();
 		myButton.pressButton();
 		
-		
 		myMower.systemOn();
 	
-		Battery myBattery = new Battery();
+		Battery myBattery = new Battery("lithium-ion", 20, 3.2);
 		myBattery.charge();
 		myBattery.getPowerPercentage();
+		myBattery.setCapacity(20, 270);
+		myBattery.printBattery();
+		
 		
 		Blade myBlade= new Blade();
 		myBlade.autoCut();
