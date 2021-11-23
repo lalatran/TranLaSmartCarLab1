@@ -6,6 +6,14 @@ public class BoundarySensor extends Sensor {
 	private String currentZone;
 	private int perimeterWireCoordinates;
 	
+	public BoundarySensor(int area, String zone, int wire) {
+		boundaryAreaZone = area;
+		currentZone= zone;
+		perimeterWireCoordinates = wire;
+	}
+	public void printBoundarySensor() {
+		System.out.println("Mower is currently in zone "+ currentZone);
+	}
 /** scanArea to determine the perimeterWireCoordinates
  * 
  */

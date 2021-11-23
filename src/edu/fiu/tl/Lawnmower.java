@@ -88,6 +88,9 @@ public class Lawnmower implements SelfCheckCapable {
 		mySensor.sendSignal();
 		mySensor.alertUser();
 		
+		BoundarySensor myZone = new BoundarySensor(24, "B", 65);
+		myZone.printBoundarySensor();
+		
 		Wheel myWheel1=new Wheel("Rubber");
 		myWheel1.setDimensions(13.4, 2.5);
 		myWheel1.printWheel();
