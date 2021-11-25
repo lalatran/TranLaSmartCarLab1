@@ -20,12 +20,16 @@ public class Lawnmower implements SelfCheckCapable {
 	private int modelYear;
 	private double weight;
 	private String color;
+	private Engine myEngine;
+	private CameraSensor myCam;
 	
 	public Lawnmower(int year, String myManufacturer, String myModelName,String myColor) {
 		modelYear=year;
 		manufacturer = myManufacturer;
 		modelName = myModelName;
 		color=myColor;
+		myEngine=new Engine("iRobot", "Electric", 52.3, 89.6, 12);
+		myCam=new CameraSensor();
 	}
 
 	public void setWeight(double myWeight) {
@@ -97,22 +101,23 @@ public class Lawnmower implements SelfCheckCapable {
 		
 		
 	}
-	@Override
-	public boolean selfCheck() {
-		// TODO Auto-generated method stub
-		return SelfCheckUtils.randomCheck(0.1);
-	}
 	
 	@Override
 	public String getComponentName() {
 		// TODO Auto-generated method stub
 		return "my robotic mower" ;
 	}
+	
+	@Override
+	public boolean selfCheck() {
+		// TODO Auto-generated method stub
+		return SelfCheckUtils.randomCheck(0.1);
+	}
 
 	@Override
 	public boolean runSelfCheck() {
 		// TODO Auto-generated method stub
-		return SelfCheckUtils.basicSelfCheckRunner(this);
+		return SelfCheckUtils.checkComponents(this, myEngine, myCam);
 	}
 
 }
