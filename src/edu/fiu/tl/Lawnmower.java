@@ -68,7 +68,7 @@ public class Lawnmower implements SelfCheckCapable {
 		myMower.setWeight(98.2);
 		myMower.printMower();
 		
-		CommandDeck myDeck= new CommandDeck("fabricated", "steel");
+		UserInterfaceApp myDeck= new UserInterfaceApp("fabricated", "steel");
 		myDeck.printDeck();
 		
 		Button myButton=new Button();

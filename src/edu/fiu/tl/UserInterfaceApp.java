@@ -7,7 +7,7 @@ package edu.fiu.tl;
  * @author Tran
  *
  */
-public class CommandDeck {
+public class UserInterfaceApp {
 
 	private String deckMaterial;
 	private String deckType;
@@ -15,7 +15,7 @@ public class CommandDeck {
 	private double deckWidth;
 	private double deckHeight;
 	
-	public CommandDeck( String dt, String dm) {
+	public UserInterfaceApp( String dt, String dm) {
 		deckType=dt;
 		deckMaterial=dm;
 	}
